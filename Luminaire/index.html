@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <script type="text/javascript" src="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type="text/css" /></script>
+  
+</head>     
+<body id = "main" onload = "onDocLoad()">
+<form id = "Inputs" autocomplete = "off">
+  <div>
+    <br>
+    <input id="customerInput" type="text" autocomplete = "off"> : Customer Name </input>
+  </div>
+    <div>
+    <br>
+    <input id="quantityInput" type="number" min = "1" value = 1> : Quantity
+    <bdi id = "indent">
+    <input id="quantityProduct" type="number" min = "1" value = 1> : Quantity </input>
+    </bdi>
+  </div>
+  <div>
+    <br>
+    <input id="tapeInput" type="text" placeholder="Tape Name"> : Tape Type </input>
+    <bdi id = "indent">
+    <input id="productInput" type="text" placeholder="Product Name"> : Product Type </input>
+    </bdi>
+  </div>
+  <div>
+    <br>
+    <input id="profileInput" type="text" placeholder="Empty if None"> : Profile Type
+  </div>
+  <div>
+    <bdi id = "indent">
+    <input id="IDQuantity" type="number" value=0 min="0"> : ID Quantity
+    </bdi>
+  <br>
+    <input id="lengthInput" input type="number" value=0 min = "0"> : Product Length
+  </div>
+  <div>
+    <bdi id = "indent">
+    <input id="profileID" type="text" placeholder="Item ID"> : Profile ID 
+    </bdi>
+    <br>
+    <select id="profileCover">
+      <option>Frosted</option>
+      <option>No Cover</option>
+    </select> : Cover Type
+  </div>
+  <div>
+    <br>
+    <input id="wireInputL" type="text" placeholder= "Empty if None"> : Left Wire Type
+  </input>
+  </div>
+  <div>
+    <br>
+    <input id="wireInputR" type="text" placeholder= "Empty if None"> : Right Wire Type
+  </div>
+  <div>
+    <br>
+    <bdi id = "indent">
+    <select id="discountType">
+      <option>None</option>
+      <option>Percent</option>
+      <option>Flat Amount</option>
+    </select>
+      : Discount Type, if any
+    </bdi>
+  </div>
+  <div>
+    <select id="wireLengthL">
+      <option>2</option>
+      <option>4</option>
+      <option>6</option>
+      <option>12</option>
+      <option>24</option>
+      <option>36</option>
+      <option>48</option>
+      <option>60</option>
+      <option>72</option>
+      <option>84</option>
+      <option>96</option>
+      <option>108</option>
+      <option>120</option>
+      <option>Other</option>
+    </select>
+    : Left Wire Length
+    <input id="wireLeftOther" type="number">
+  </div>
+  <br>
+  <div id = "DiscountText">
+    <bdi id = "indent">
+      <input id="Discount" type="number" value = 0> : Discount, if any </input>
+    </bdi>
+  </div>
+  <div>
+    <select id="wireLengthR">
+      <option>2</option>
+      <option>4</option>
+      <option>6</option>
+      <option>12</option>
+      <option>24</option>
+      <option>36</option>
+      <option>48</option>
+      <option>60</option>
+      <option>72</option>
+      <option>84</option>
+      <option>96</option>
+      <option>108</option>
+      <option>120</option>
+      <option>Other</option>
+      </select>
+    : Right Wire Length
+    <input id="wireRightOther" type="number">
+  </div>
+  <div id ="base">
+    <div id="errors"> </div>
+    
+    <bdi id = "indent">
+    <p id="customer"> </p>
+    </bdi>
+    <p id="cost">    </p>
+    <bdi id="line"> </bdi>
+    <span id="name"> Item
+    </span><span id="description"> Description
+    </span><span id="price"> Price
+    </span><span id="quantity"> Quantity
+    </span><span id="totalPrice"> Total
+    </span><span id = "delete"> Delete <br> </span>
+      
+  </div>
+<!--   <div>
+    <p id="name"> Item <br>
+    <p id="description"> Description <br>
+    <p id="price"> Price <br> 
+    <p id="quantity"> Quantity <br>
+    <p id="totalPrice"> Total <br>
+    <p id = "delete"> Delete <br> 
+  </div> -->
+    <br><br>
+  
+  </div>
+
+  <div id = "buttons">
+    <button type = "button" onclick="addEstimate();">New Profile</button>
+    <button type = "button" onclick="addProduct();">New Product</button>
+    <button type = "button" onclick="addID();">New ID</button>
+    <button type = "button" onclick="deleteTable();">Clear Estimates</button>
+    <button type = "button" onclick="printHelper();">Export Table</button>
+  </div>
+  </div>
+  
+</form>
+
+</body>
+</html>
